@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class node{
+public:	
+	int data;
+	node* next=NULL;
+node(int data)
+{
+	this->data=data;
+	this->next=NULL;
+	}	
+};
+class singlyLinkedList{
+public:
+node* head;
+node* tail;
+singlyLinkedList(node* &head,node* &tail)
+{
+this->head=head;
+this->tail=tail;	
+}	
+void insertAtHead(int data)
+{
+	node* temp=new node(data);
+	temp->next=head;
+	head=temp;	
+}
+void palindrome(){
+
+cout<<"gi"<<endl;
+}
+void printData()
+{
+	node* temp=head;
+	while(temp!=NULL)
+	{
+		cout<<temp->data;
+		cout<<endl;
+		temp=temp->next;
+	}
+}
+};
+int main()
+{
+	node* node1=new node(1);
+    singlyLinkedList s1(node1,node1);
+	s1.insertAtHead(2);
+	s1.insertAtHead(2);
+	s1.insertAtHead(1);
+	s1.palindrome();
+}
